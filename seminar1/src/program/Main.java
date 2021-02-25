@@ -18,11 +18,11 @@ public class Main {
 		
 		z.feedAllAnimals();
 	
-	    Zebra z1 = new Zebra("z1");
-	    Zebra z2 = new Zebra("z2");
+	    Zebra zebra1 = new Zebra("zebra1");
+	    Zebra zebra2 = new Zebra("zebra2");
 	    
-	    z.addAnimal(z1);
-	    z.addAnimal(z2);
+	    z.addAnimal(zebra1);
+	    z.addAnimal(zebra2);
 	    
 	    z.feedAllAnimals();
 	}

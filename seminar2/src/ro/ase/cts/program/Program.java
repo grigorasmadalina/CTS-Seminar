@@ -1,24 +1,27 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.clase.Angajat;
+import ro.ase.cts.clase.Aplicant;
+
 import java.io.FileNotFoundException;
 import java.util.List;
-
-import ro.ase.cts.clase.Aplicant;
-import ro.ase.cts.clase.readers.AngajatReader;
-import ro.ase.cts.clase.readers.AplicantReader;
-
+import ro.ase.cts.clase.readers.*;
 public class Program {
-
-	public static List<Aplicant> readAplicanti (AplicantReader reader) throws FileNotFoundException {
+	
+	public static List<Aplicant> citesteAplicanti(AplicantReader reader) throws FileNotFoundException
+	{
 		return reader.readAplicanti();
 	}
-	
 	public static void main(String[] args) {
 		List<Aplicant> listaAngajati;
 		try {
-			listaAngajati = readAplicanti(new AngajatReader("angajati.txt"));
+			listaAngajati = citesteAplicanti(new AngajatReader("angajati.txt"));
 			for(Aplicant angajat:listaAngajati)
+			{
 				System.out.println(angajat.toString());
+				System.out.println("Angajatul are finantare:"+angajat.getFinantare());
+			}
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

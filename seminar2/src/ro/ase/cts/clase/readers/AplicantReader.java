@@ -33,7 +33,7 @@ public abstract class AplicantReader {
 		aplicant.setPrenume(prenume);
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
-		aplicant.setDenumiriProiecte(nr,vect);
+		aplicant.setDenumireProiecte(nr,vect);
 		return aplicant;
 		
 	}

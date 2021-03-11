@@ -1,4 +1,4 @@
-package  ro.ase.cts.clase;
+package ro.ase.cts.clase;
 
 public abstract class Aplicant{
 	protected String nume;
@@ -9,6 +9,12 @@ public abstract class Aplicant{
 	protected String[] denumireProiect;
 	
 	
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
+	public void setDenumireProiect(String[] denumireProiect) {
+		this.denumireProiect = denumireProiect;
+	}
 	public String getNume() {
 		return nume;
 	}
@@ -27,9 +33,6 @@ public abstract class Aplicant{
 	public void setVarsta(int varsta) {
 		this.varsta = varsta;
 	}
-	public void setPunctaj(int punctaj) {
-		this.punctaj = punctaj;
-	}
 	public void statut(){
 		if(punctaj>80)
 			System.out.println("Aplicantul "+nume+" "+prenume+" a fost acceptat.");
@@ -39,12 +42,12 @@ public abstract class Aplicant{
 	public int getPunctaj() {
 		return punctaj;
 	}
-
-	
-	
-	public void setDenumireProiect(int punctaj) {
+	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
+	
+	
+
 	
 	public Aplicant() {
 		super();
@@ -62,10 +65,10 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setDenumiriProiecte(int nr_proiecte, String[] denumireProiect) {
+	public void setDenumireProiecte(int nr_proiecte,String[] denumire_proiecte) {
 		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = denumireProiect;
+		this.denumireProiect=denumire_proiecte;
 	}
-	
-	public abstract int getSumaFinantata();
+
+	public abstract int getFinantare() ;
 }

@@ -42,5 +42,10 @@ public class Student extends Aplicant {
 		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return s;
 	}
+	@Override
+	public int getSumaFinantata() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

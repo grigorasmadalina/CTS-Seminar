@@ -9,32 +9,30 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.Student;
 
-public class StudentReader extends AplicantReader {
-	public StudentReader(String fileName) {
-		super(fileName);
-		// TODO Auto-generated constructor stub
-	}
+public class StudentReader extends AplicantReader{
 
-	public List<Aplicant> readAplicanti() throws FileNotFoundException, NumberFormatException {
-		Scanner input = new Scanner(new File(super.fileName));
+
+	public  List<Aplicant> readAplicanti() throws FileNotFoundException {
+		Scanner input = new Scanner(new File(fileName));
 		input.useDelimiter(",|\n");
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
 
 		while (input.hasNext()) {
-			String nume = input.next();
-			String prenume = (input.next()).toString();
-			int varsta = Integer.valueOf(input.nextInt());
-			int punctaj = Integer.valueOf(input.nextInt());
-			int nr = Integer.valueOf(input.nextInt());
-			String[] vect = new String[5];
-			for (int i = 0; i < nr; i++)
-				vect[i] = input.next();
+Student s=new Student();
+super.readAplicant(input, s);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
-			Student s = new Student(nume, prenume, varsta, punctaj, nr, vect, facultate, an_studii);
+			s.setAn_studii(an_studii);
+			s.setFacultate(facultate);
+		
 			studenti.add(s);
 		}
 		input.close();
 		return studenti;
 	}
+	public StudentReader(String fileName) {
+		super(fileName);
+		// TODO Auto-generated constructor stub
+	}
+
 }

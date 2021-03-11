@@ -7,7 +7,7 @@ import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Utils;
 
 
-//murim
+
 public class Program {
 
 	public static void main(String[] args) {

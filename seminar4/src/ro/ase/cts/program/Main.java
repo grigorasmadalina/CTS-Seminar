@@ -2,6 +2,7 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.BrokerTranzactie;
 import ro.ase.cts.clase.BrokerTranzactieLazy;
+import ro.ase.cts.clase.Minge;
 
 
 public class Main {
@@ -23,5 +24,13 @@ public class Main {
 	BrokerTranzactieLazy lazy2 = BrokerTranzactieLazy.getInstance("Ioana", 3, 50);
     System.out.println(lazy1.toString());
     System.out.println(lazy2.toString());
+    
+    
+	Minge minge1 = Minge.getInstance("rosu", 20, 10.3);
+	Minge minge2 = Minge.getInstance("albastru", 35, 10);
+    System.out.println(minge1.toString());
+    System.out.println(minge2.toString());
+    
+    
    }
 }

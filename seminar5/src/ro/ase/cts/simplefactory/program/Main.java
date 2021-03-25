@@ -1,8 +1,7 @@
 package ro.ase.cts.simplefactory.program;
 
-import ro.ase.cts.simplefactory.clase.FactoryPersonal;
-import ro.ase.cts.simplefactory.clase.Medic;
 import ro.ase.cts.simplefactory.clase.PersonalSpital;
+import ro.ase.cts.simplefactory.clase.FactoryPersonal;
 import ro.ase.cts.simplefactory.clase.TipPersonal;
 
 public class Main {

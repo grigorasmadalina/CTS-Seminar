@@ -2,6 +2,7 @@ package ro.ase.cts.builder.program;
 
 import ro.ase.cts.builder.clase.Rezervare;
 import ro.ase.cts.builder.clase.RezervareBuilder;
+import ro.ase.cts.builder.clase.RezervareBuilderV2;
 
 public class Main {
 	public static void main(String[]args) {
@@ -19,6 +20,11 @@ public class Main {
 		System.out.println(rezervare4);
 		System.out.println(rezervare5);
 		
+		//nu mai avem shallow
+		RezervareBuilderV2 builderV2=new RezervareBuilderV2().setAreMancareInclusa(true)
+				.setAreBauturaInclusa(true).setAreScaunErgonomic(true).setAreMuzicaAmbientala(true).setAreBauturaInclusa(true);
+		Rezervare rezervare6 = builderV2.setCodRezervare(100).build();
+		Rezervare rezervare7 = builderV2.setCodRezervare(101).build();
 	}
 
 }

@@ -1,9 +1,12 @@
-package clase;
+package teste;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import clase.Grupa;
+import clase.Student;
 
 public class TestGrupa {
 	
